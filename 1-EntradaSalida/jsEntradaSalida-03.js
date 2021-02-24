@@ -8,7 +8,4 @@ function mostrar()
 	nombreIngresado=txtIdNombre.value;
 
 	alert(nombreIngresado);
-
 }
-
-

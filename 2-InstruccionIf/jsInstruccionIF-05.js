@@ -9,5 +9,4 @@ function mostrar()
 	{
 		alert ("Usted NO es adolescente");
 	}
-
 }//FIN DE LA FUNCIÓN

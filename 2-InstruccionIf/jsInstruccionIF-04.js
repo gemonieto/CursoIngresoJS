@@ -13,6 +13,4 @@ function mostrar()
 	{
 		alert ("Usted no es adolescente");
 	}
-
-
 }//FIN DE LA FUNCIÓN

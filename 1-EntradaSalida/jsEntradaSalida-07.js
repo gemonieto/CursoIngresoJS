@@ -61,4 +61,3 @@ division=numero1/numero2;
 
 alert("la division es: "+division)
 }
-

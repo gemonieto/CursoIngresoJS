@@ -12,4 +12,3 @@ function mostrar()
 	alert("Usted se llama "+nombreIngresado+" y su edad es "+edadIngresada+ " años.");
 
 }
-

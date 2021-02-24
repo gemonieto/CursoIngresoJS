@@ -13,5 +13,4 @@ function mostrar()
 	{
 		alert ("Usted es menor de edad");
 	}
-
 }//FIN DE LA FUNCIÓN

@@ -16,4 +16,3 @@ function sumar()
 
 	alert("La suma es: "+resultado);
 }
-

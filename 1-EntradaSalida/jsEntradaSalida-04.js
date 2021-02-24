@@ -9,5 +9,4 @@ function mostrar()
 	datoIngresado=prompt("Ingrese el dato");
 
 	txtIdNombre.value=datoIngresado;
-
 }
