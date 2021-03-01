@@ -7,16 +7,12 @@ function mostrarAumento()
 {
 	var importe;
 	var importeParceado;
-	var descuento=25;
-	var descuentoParceado;
+	var descuento=.25;
 	var resultado;
-	var resultadoParceado;
 
 	importe=txtIdImporte.value;
 	importeParceado=parseInt(importe);
-	descuentoParceado=parseInt(descuento);
-	resultado=importeParceado-((importeParceado*descuentoParceado)/100);
-	resultadoParceado=parseInt(resultado);
+	resultado=importeParceado-(importeParceado*descuento);
 
 	txtIdResultado.value=resultado;
 }

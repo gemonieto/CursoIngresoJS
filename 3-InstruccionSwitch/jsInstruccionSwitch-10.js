@@ -1,4 +1,4 @@
-Germán Nieto Ejercicio Switch 10
+//Germán Nieto Ejercicio Switch 10
 
 function mostrar()
 {
@@ -11,8 +11,6 @@ function mostrar()
 		switch (destinoIngresado)
 		{
 			case "Mar del Plata":
-				alert ("Se viaja");
-			break;
 			case "Cataratas":
 				alert ("Se viaja");
 			break;

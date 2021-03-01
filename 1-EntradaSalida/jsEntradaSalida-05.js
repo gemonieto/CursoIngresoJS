@@ -10,5 +10,4 @@ function mostrar()
 	edadIngresada=txtIdEdad.value;
 
 	alert("Usted se llama "+nombreIngresado+" y su edad es "+edadIngresada+ " años.");
-
 }

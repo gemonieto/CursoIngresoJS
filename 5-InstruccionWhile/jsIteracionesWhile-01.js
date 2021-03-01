@@ -5,13 +5,11 @@ function mostrar()
 {
 	var numero = 0;
 	var contador = 0;
-	var resultado = 0;
 
 	while (contador<10)
 	{
 		numero=numero+1;
 		contador=contador+1;
-		alert(numero);
+		console.log(numero);
 	}
-	
 }//FIN DE LA FUNCIÓN

@@ -8,15 +8,11 @@ function mostrarAumento()
 	var sueldo;
 	var sueldoParceado;
 	var aumento=10;
-	var aumentoParceado;
 	var resultado;
-	var resultadoParceado;
 
 	sueldo=txtIdSueldo.value;
 	sueldoParceado=parseInt(sueldo);
-	aumentoParceado=parseInt(aumento);
-	resultado=((sueldoParceado*aumentoParceado)/100)+sueldoParceado;
-	resultadoParceado=parseInt(resultado)
+	resultado=((sueldoParceado*aumento)/100)+sueldoParceado;
 
-	txtIdResultado.value=resultadoParceado;
+	txtIdResultado.value=resultado;
 }
