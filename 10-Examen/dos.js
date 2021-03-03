@@ -23,6 +23,9 @@ function mostrar()
     var notaPromedio;
     var edad;
     var respuesta=true;
+    var flagPrimerNotaNoMasculino=true;
+    var mayorNotaNoMasculino;
+    var nombreMayorNotaNoMasculino;
     
 
     do
@@ -67,9 +70,18 @@ function mostrar()
     
     }while(respuesta==true);
 
-    
-
-
-
+    if(sexo!="masculino")
+    {
+      if(flagPrimerNotaNoMasculino==true)
+      {
+        mayorNotaNoMasculino=notaPromedio;
+        nombreMayorNotaNoMasculino=nombre;
+        flagPrimerNotaNoMasculino=false;
+      }
+      else if (nota>mayorNotaNoMasculino)
+        {
+          mayorNotaNoMasculino=notaPromedio;
+          nombreMayorNotaNoMasculino=nombre;
+        }
 
 }

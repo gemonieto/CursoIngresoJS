@@ -94,8 +94,6 @@ function mostrar()
 					unidadesIACmenosDoscientosCompradas=unidadesIACmenosDoscientosCompradas+1;
 				}
 				break;
-
-				break;
 			
 			case "QUAT":
 				contadorQUAT=contadorQUAT+1;
@@ -122,13 +120,10 @@ function mostrar()
 			marcaMasCaraProducto = marcaProducto;
 			tipoMasCaroProducto = tipoProducto;
 		}
-		else
+		else if (precioProducto > precioMasCaroProducto)
 		{
-			if (precioProducto > precioMasCaroProducto)
-			{
-				marcaMasCaraProducto = marcaProducto;
-				tipoMasCaroProducto = tipoProducto;
-			}
+			marcaMasCaraProducto = marcaProducto;
+			tipoMasCaroProducto = tipoProducto;
 		}
 	
 	}
@@ -157,10 +152,6 @@ function mostrar()
 	document.writeln("a) El promedio de cantidad por tipo de producto -Alcohol: " + promedioAlcohol + " - IAC: " + promedioIAC + " - QUAT: " + promedioQUAT);
 	document.writeln("b) El tipo de inflamable con más cantidad de unidades en total de la compra es: " + InflamableMasCantidadProducto);
 	document.writeln("c) Unidades de IAC con precios menos a 200 (inclusive) se compraron en total: "+ unidadesIACmenosDoscientosCompradas);
-	document.writeln("d) la marca y tipo del más caro de los productos:" + marcaMasCaraProducto + " y " + tipoMasCaroProducto );
-
-
-
+	document.writeln("d) la marca y tipo del más caro de los productos:" + marcaMasCaraProducto + " y " + tipoMasCaroProducto);
+	
 }
-
-
