@@ -26,6 +26,9 @@ function mostrar()
     var flagPrimerNotaNoMasculino=true;
     var mayorNotaNoMasculino;
     var nombreMayorNotaNoMasculino;
+    var flagPrimerLibre=true;
+    var masJovenLibre;
+    var nombreMasJovenLibre;
     
 
     do
@@ -66,22 +69,46 @@ function mostrar()
         edad=prompt("Ingrese edad valida");
       }
       
-      respuesta=confirm("desea continuar?");
-    
-    }while(respuesta==true);
-
-    if(sexo!="masculino")
-    {
-      if(flagPrimerNotaNoMasculino==true)
+        
+      if(sexo!="masculino")
       {
-        mayorNotaNoMasculino=notaPromedio;
-        nombreMayorNotaNoMasculino=nombre;
-        flagPrimerNotaNoMasculino=false;
-      }
+        if(flagPrimerNotaNoMasculino==true)
+        {
+          mayorNotaNoMasculino=notaPromedio;
+          nombreMayorNotaNoMasculino=nombre;
+          flagPrimerNotaNoMasculino=false;
+        }
       else if (nota>mayorNotaNoMasculino)
         {
           mayorNotaNoMasculino=notaPromedio;
           nombreMayorNotaNoMasculino=nombre;
         }
 
+      if (tipoCursada=="libre")
+      {
+        if (flagPrimerLibre==true)
+        {
+          masJovenLibre=edad;
+          nombreMasJovenLibre = nombre;
+          banderaPrimerLibre=false;
+        }
+        else
+        {
+          if (edadIngresada < menorEdadLibre)
+          {
+            menorEdadLibre = edad;
+            nombreMenorEdadLibre = nombre;
+          }
+        }
+    
+
+      respuesta=confirm("desea continuar?");
+    
+    }while(respuesta==true);
+
+
+
 }
+
+document.writeln("a) El nombre del mejor promedio que no sea masculino"+ mayorNotaNoMasculino);
+document.writeln()
