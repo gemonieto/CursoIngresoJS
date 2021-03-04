@@ -23,7 +23,7 @@ function mostrar()
   var notaPromedio;
   var edad;
   var respuesta=true;
-  var flagPrimerNotaNoMasculino=true;
+  var flagPrimeraNotaNoMasculino=true;
   var mayorNotaNoMasculino;
   var nombreMayorNotaNoMasculino;
   var flagPrimerLibre=true;
@@ -84,15 +84,15 @@ function mostrar()
     switch (sexo)
     {
       case "masculino":
-        contadorMasculino=contadorMasculino+1
+        contadorMasculino=contadorMasculino+1;
         acumuladorNotaMasculino=acumuladorNotaMasculino+nota;
         break;
       case "femenino":
-        contadorFemenino++;
+        contadorFemenino=contadorFemenino+1;
         acumuladorNotaFemenino=acumuladorNotaFemenino+nota;
         break;
       case "no binario":
-        contadorNoBinario++;
+        contadorNoBinario=contadorNoBinario+1;
         acumuladorNotaNoBinario=acumuladorNotaNoBinario+nota;
         break;
     }
@@ -130,7 +130,7 @@ function mostrar()
     {
       if (flagPrimerTipoNoRemota=true)
       {
-        mayorCantidadMaterias=cantidadMaterias
+        mayorCantidadMaterias=cantidadMaterias;
         edadMasMateriasNoRemota=edad;
         nombreMasMateriasNoRemota=nombre;
         flagPrimerTipoNoRemota=false;        
@@ -142,8 +142,7 @@ function mostrar()
       }
     }  
   
-    respuesta=confirm("desea continuar?");
-  
+  respuesta=confirm("desea continuar?"); 
   }while(respuesta==true);
 
 
