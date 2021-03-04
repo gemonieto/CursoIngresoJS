@@ -10,7 +10,7 @@ edad (validar)
 se debe informar de existir, o informar que no existe , en el caso que corresponda.
 a) El nombre del mejor promedio que no sea masculino
 b) El nombre del mas joven de los alumnos entre los que la dan libre
-d) El promedio de nota por sexo
+c) El promedio de nota por sexo
 f) La edad y nombre del que cursa mas materias que no sean en forma remota
 */
 
@@ -27,9 +27,17 @@ function mostrar()
     var mayorNotaNoMasculino;
     var nombreMayorNotaNoMasculino;
     var flagPrimerLibre=true;
-    var masJovenLibre;
     var nombreMasJovenLibre;
-    
+    var edadMasJovenLibre;
+    var contadorMasculino=0;
+    var acumuladorNotaMasculino=0;
+    var contadorFemenino=0;
+    var acumuladorNotaFemenino=0;
+    var contadorNoBinario=0;
+    var acumuladorNotaNoBinario=0;
+    var promedioMasculino;
+    var promedioFemenino;
+    var promedioNoBinario;
 
     do
     {
@@ -69,7 +77,22 @@ function mostrar()
         edad=prompt("Ingrese edad valida");
       }
       
-        
+      switch (sexo)
+      {
+        case "masculino":
+          contadorMasculino=contadorMasculino+1
+          acumuladorNotaMasculino=acumuladorNotaMasculino+nota;
+          break;
+        case "femenino":
+          contadorFemenino++;
+          acumuladorNotaFemenino=acumuladorNotaFemenino+nota;
+          break;
+        case "no binario":
+          contadorNoBinario++;
+          acumuladorNotaNoBinario=acumuladorNotaNoBinario+nota;
+          break;
+      }
+      
       if(sexo!="masculino")
       {
         if(flagPrimerNotaNoMasculino==true)
@@ -88,27 +111,27 @@ function mostrar()
       {
         if (flagPrimerLibre==true)
         {
-          masJovenLibre=edad;
-          nombreMasJovenLibre = nombre;
+          edadMasJovenLibre=edad;
+          nombreMasJovenLibre=nombre;
           banderaPrimerLibre=false;
         }
-        else
+        else if (edad<edadMasJovenLibre)
         {
-          if (edadIngresada < menorEdadLibre)
-          {
-            menorEdadLibre = edad;
-            nombreMenorEdadLibre = nombre;
-          }
+            nombreMasJovenLibre=nombre;
         }
+      }
     
-
-      respuesta=confirm("desea continuar?");
+    respuesta=confirm("desea continuar?");
     
     }while(respuesta==true);
 
 
+    promedioMasculino=acumuladorNotaMasculino/contadorMasculino;
+    promedioFemenino=acumuladorNotaFemenino/contadorFemenino;
+    promedioNoBinario=acumuladorNotaNoBinario/contadorNoBinario;
+
+    document.writeln("a) El nombre del mejor promedio que no sea masculino" + mayorNotaNoMasculino);
+    document.writeln("b) El nombre del mas joven de los alumnos entre los que la dan libre" + nombreMasJovenLibre);
+    document.writeln("c) El promedio de nota por sexo masculino"+promedioMasculino+" femenino " + promedioFemenino + "no binario" + promedioNoBinario);
 
 }
-
-document.writeln("a) El nombre del mejor promedio que no sea masculino"+ mayorNotaNoMasculino);
-document.writeln()
